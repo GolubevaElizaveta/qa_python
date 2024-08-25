@@ -15,7 +15,7 @@ class TestBooksCollector:
 
     @pytest.mark.parametrize("title", [
         'A' * 40,  # 40 символов
-        'Книга с заглавием'  # менее 40 символов
+        'Хрупкое равновесие'  # менее 40 символов
     ])
     def test_add_new_book_title_length_success(self, title):
         collector = BooksCollector()
@@ -24,7 +24,7 @@ class TestBooksCollector:
 
     @pytest.mark.parametrize("title", [
         'A' * 41,  # 41 символ
-        'Заглавие, которое слишком длинное и не должно быть добавлено в коллекцию книг'  # более 40 символов
+        'Удивительное путешествие Нильса Хольгерссона с дикими гусями по Швеции'  # более 40 символов
     ])
     def test_add_new_book_title_length_failure(self, title):
         collector = BooksCollector()
