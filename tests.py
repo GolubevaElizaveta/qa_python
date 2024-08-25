@@ -15,7 +15,7 @@ class TestBooksCollector:
 
     @pytest.mark.parametrize("title", [
         'A' * 40,  # 40 символов
-        'Хрупкое равновесие'  # менее 40 символов
+        'Хрупкое'  # менее 40 символов
     ])
     def test_add_new_book_title_length_success(self, title):
         collector = BooksCollector()
